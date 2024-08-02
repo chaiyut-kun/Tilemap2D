@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/19193821/use-the-new-keyword-if-hiding-was-intended-warning
+https://stackoverflow.com/questions/74855271/cs0109-the-member-member-does-not-hide-an-inherited-member-the-new-keyword
