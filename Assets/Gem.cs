@@ -10,11 +10,19 @@ public class Gem : MonoBehaviour
         
     }
 
+<<<<<<< HEAD
     private void OnTriggerEnter(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
             // GetComponent<AudioSource>.Player();
+=======
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            GetComponent<AudioSource>().Play();
+>>>>>>> main
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
             // Destroy(col);
