@@ -31,6 +31,7 @@ public class GatherInput : MonoBehaviour
         controls.Player.Jump.performed -= JumpStart;
         controls.Player.Jump.canceled -= JumpStop;
         controls.Player.Disable();
+        
     }
     private void StartMove(InputAction.CallbackContext contxt)
     {
