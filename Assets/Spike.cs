@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float dmg = 10f;
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("PalyerStats"))
+        {
+            Debug.Log("Player hit a spike");
+            col.GetComponent<PlayerStats>().TakeDamage(dmg);
+        }
+    }
     void Start()
     {
         
