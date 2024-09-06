@@ -12,7 +12,6 @@ public class PlayerStats : MonoBehaviour
     {
         animator = GetComponentInParent<Animator>();
         health = max_health;
-        TakeDamage(1);
         
     }
     public void TakeDamage(float dmg)
@@ -28,14 +27,12 @@ public class PlayerStats : MonoBehaviour
 
         if(health <= 0)
         {
-            animator.SetBool("Dead",true);   
             GetComponent<PolygonCollider2D>().enabled = false;
             GetComponentInParent<GatherInput>().DisableControl();
             Debug.Log("You are dead!"); 
             
         }
 
-        animator.SetBool("Hurt",false);
         StartCoroutine(DamagePrevention());
     }
     public IEnumerator DamagePrevention()
@@ -51,6 +48,8 @@ public class PlayerStats : MonoBehaviour
         }
         else {
             animator.SetBool("Dead",true);
+            Debug.Log("left 4 dead 2 best game ever");
+            
             // -> dead animation
         }
 
