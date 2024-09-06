@@ -8,7 +8,7 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("PalyerStats"))
+        if (col.CompareTag("PlayerStats"))
         {
             Debug.Log("Player hit a spike");
             col.GetComponent<PlayerStats>().TakeDamage(dmg);

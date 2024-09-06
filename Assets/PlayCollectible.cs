@@ -8,7 +8,8 @@ public class PlayCollectible : MonoBehaviour
     private int gem_number = 0; 
     public Text text_component;
     // Start is called before the first frame update
-    private void UpdateText(){
+    private void UpdateText()
+    {
         text_component.text = gem_number.ToString();
     }
 
