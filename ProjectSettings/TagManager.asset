@@ -50,3 +50,6 @@ TagManager:
   - name: ground
     uniqueID: 770208179
     locked: 0
+  - name: UI_Canvas
+    uniqueID: 4061639665
+    locked: 0
