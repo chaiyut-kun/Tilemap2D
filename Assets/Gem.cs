@@ -14,9 +14,16 @@ public class Gem : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            // call gem collecting method from PlayCollectibl
+            col.GetComponent<PlayCollectible>().GemCollecting();
+            
+            // sound effect 
             GetComponent<AudioSource>().Play();
+
+            // hide sprite and collider function of object
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
+            
             // Destroy(col);
         }
     }    

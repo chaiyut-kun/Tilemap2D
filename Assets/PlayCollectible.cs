@@ -11,6 +11,11 @@ public class PlayCollectible : MonoBehaviour
     private void UpdateText(){
         text_component.text = gem_number.ToString();
     }
+
+    public void GemCollecting(){
+        gem_number ++;
+        UpdateText();
+    }
     void Start()
     {
         UpdateText();
