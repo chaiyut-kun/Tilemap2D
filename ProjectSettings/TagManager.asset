@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerStats
+  - logic
   layers:
   - Default
   - TransparentFX
