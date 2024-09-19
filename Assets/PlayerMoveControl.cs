@@ -45,9 +45,9 @@ public class PlayerMoveControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckStatus();
         Move();
         SetAnimatorValue();
-        CheckStatus();
     
     }
 

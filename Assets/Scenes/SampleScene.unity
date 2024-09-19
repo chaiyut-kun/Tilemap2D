@@ -671,7 +671,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 305622719}
   - component: {fileID: 305622720}
   - component: {fileID: 305622721}
+  - component: {fileID: 305622722}
   m_Layer: 9
   m_Name: EnemyReddog
   m_TagString: Untagged
@@ -993,6 +994,22 @@ PolygonCollider2D:
       - {x: 0.15016496, y: -0.07760787}
       - {x: -0.051965833, y: 0.30151296}
   m_UseDelaunayMesh: 0
+--- !u!114 &305622722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305622714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8589ce1d189fd8742866431fe315a42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  force_x: 0
+  force_y: 0
+  duration: 0
 --- !u!1 &387953510
 GameObject:
   m_ObjectHideFlags: 3
