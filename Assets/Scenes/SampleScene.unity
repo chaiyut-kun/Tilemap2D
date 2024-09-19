@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 305622715}
   - component: {fileID: 305622719}
   - component: {fileID: 305622720}
+  - component: {fileID: 305622721}
   m_Layer: 9
   m_Name: EnemyReddog
   m_TagString: Untagged
@@ -936,6 +937,62 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 0
+--- !u!60 &305622721
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305622714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.125, y: 3.125}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.19111371, y: 0.6230252}
+      - {x: -0.516834, y: 0.2738185}
+      - {x: -0.70545864, y: 0.1403079}
+      - {x: -1.096168, y: -0.03492093}
+      - {x: -0.94436955, y: -0.16905618}
+      - {x: -0.8104632, y: -0.356565}
+      - {x: -0.47940564, y: -0.58649707}
+      - {x: -0.18015778, y: -0.6104944}
+      - {x: 0.0021493435, y: -0.3664043}
+      - {x: 0.15016496, y: -0.07760787}
+      - {x: -0.051965833, y: 0.30151296}
+  m_UseDelaunayMesh: 0
 --- !u!1 &387953510
 GameObject:
   m_ObjectHideFlags: 3
@@ -4507,7 +4564,7 @@ Transform:
   m_GameObject: {fileID: 1335345278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.978, y: -0.396, z: 0}
+  m_LocalPosition: {x: -2.04, y: -0.58, z: 0}
   m_LocalScale: {x: 0.94306606, y: 0.94306606, z: 1.4310561}
   m_ConstrainProportionsScale: 0
   m_Children: []

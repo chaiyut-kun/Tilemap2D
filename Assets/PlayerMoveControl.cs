@@ -20,6 +20,7 @@ public class PlayerMoveControl : MonoBehaviour
     public LayerMask ground_layer;
     public Transform left_point;
     private bool on_ground = false;
+    private bool knock_back = false;
     
     // Start is called before the first frame update
     void Start()
@@ -72,10 +73,41 @@ public class PlayerMoveControl : MonoBehaviour
             Debug.Log("speed");
         }
     }
+
+    public IEnumerator KnockBack(float forceX, float forceY,float duration, Transform otherObject)
+    {
+        int knockBackDirection;
+        if(transform.position.x < otherObject.position.x)
+        {
+            knockBackDirection = -1;
+        }
+        else
+        {
+            knockBackDirection = 1;
+        }
+
+        knock_back = true;
+        rigidbody2D.velocity = Vector2.zero;
+        Vector2 theForce = new Vector2(forceX * knockBackDirection, forceY);
+        rigidbody2D.AddForce(theForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(duration);
+        knock_back = false;
+        rigidbody2D.velocity = Vector2.zero;
+    }
+    
+
+    
     private void FixedUpdate()
     {
         Flip();
+        if(knock_back) 
+        {
+            return;
+        }
         JumpPlayer();
+
+        
         
     }
 
