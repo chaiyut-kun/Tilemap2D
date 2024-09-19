@@ -9,7 +9,19 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.Compare)
+        if (col.CompareTag("PlayerStats"))
+        {
+            playerStats = col.GetComponent<PlayerStats>();
+            playerStats.TakeDamage(damage);
+
+            SpecialAttack();
+        }
+    }
+    
+
+    public virtual void SpecialAttack()
+    {
+        
     }
     
     // Start is called before the first frame update

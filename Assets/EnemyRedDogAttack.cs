@@ -8,6 +8,14 @@ public class EnemyRedDogAttack : EnemyAttack
     public float force_x;
     public float force_y;
     public float duration;
+
+    public override void SpecialAttack()
+    {
+        base.SpecialAttack();
+        playerMoveControls = playerStats.GetComponentInParent<PlayerMoveControl>();
+        StartCoroutine(playerMoveControls.KnockBack(force_x, force_y, duration, transform));
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
