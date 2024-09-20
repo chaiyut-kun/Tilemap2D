@@ -9,6 +9,7 @@ public class GatherInput : MonoBehaviour
     public float value_x;
     public bool jump_input;
     public float jump_force = 5;
+    public bool try_atk;
 
     private void Awake()
     {
@@ -30,6 +31,8 @@ public class GatherInput : MonoBehaviour
         controls.Player.Move.canceled -= StopMove;
         controls.Player.Jump.performed -= JumpStart;
         controls.Player.Jump.canceled -= JumpStop;
+        controls.Player.Attack.performed -= TryToAtk;
+        controls.Player.Attack.canceled -= StopTryToAtk;
         controls.Player.Disable();
         
     }
@@ -61,6 +64,15 @@ public class GatherInput : MonoBehaviour
     private void JumpStop(InputAction.CallbackContext contxt)
     {
         jump_input = false;
+    }
+
+    private void TryToAtk(InputAction.CallbackContext cxt)
+    {
+        try_atk = true;
+    }
+    private void StopTryToAtk(InputAction.CallbackContext ctx)
+    {
+        try_atk = false;
     }
 
     
