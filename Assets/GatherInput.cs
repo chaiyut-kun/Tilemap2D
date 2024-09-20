@@ -22,6 +22,8 @@ public class GatherInput : MonoBehaviour
         controls.Player.Move.canceled += StopMove;
         controls.Player.Jump.performed += JumpStart;
         controls.Player.Jump.canceled += JumpStop;
+        controls.Player.Attack.performed += TryToAtk;
+        controls.Player.Attack.canceled += StopTryToAtk;
         controls.Player.Enable();
     }
 
