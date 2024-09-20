@@ -8,6 +8,7 @@ public class PlayerAttackControl : MonoBehaviour
     private GatherInput gather_input;
     private Animator animator; 
     public bool attack_started = false; 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +17,13 @@ public class PlayerAttackControl : MonoBehaviour
         player_move_control = GetComponent<PlayerMoveControl>();
         animator = GetComponent<Animator>();
         gather_input = GetComponent<GatherInput>();
+        
             
     }
+    // public void ActiveAttack()
+    // {
+    //     atk_collider.enabled = true;
+    // }
     private void Attack()
     {
         if(gather_input.try_atk)
