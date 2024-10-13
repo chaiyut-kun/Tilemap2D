@@ -11,6 +11,7 @@ public class PlayerMoveControl : MonoBehaviour
     private bool boost_mode = false;
     private int direction = 1;
     public float speed = 5f; 
+    public AudioSource speed_sound;
 
     public GatherInput gather_input;
     public new Rigidbody2D rigidbody2D;
@@ -65,6 +66,7 @@ public class PlayerMoveControl : MonoBehaviour
                 {
                     speed = 5;
                 }
+                speed_sound.Play();
             }
             else 
             {
