@@ -1347,6 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  speed_sound: {fileID: 0}
   gather_input: {fileID: 430848072}
   rigidbody2D: {fileID: 430848068}
   animator: {fileID: 0}
